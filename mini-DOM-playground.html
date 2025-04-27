@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>DOM Playground</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="title">Hello DOM!</h1>
+  <h2 id="sub-title">A sub-title</h2>
+
+  <div id="container">
+    <p class="parag">First</p>  
+    <p class="parag">Second</p>
+    <p class="parag">Third</p>
+  </div>
+
+  <div id="display">Hello</div>
+  <div class="show">Hi</div>
+  <button id="controls">Click me</button>
+
+  <script>
+    // Query Selector to target elements
+
+    // i. query selector
+    const title = document.querySelector('#title');
+    console.log(title)
+    title.innerHTML = 'Just the title'.toUpperCase()
+    
+    // ii. target element by ID
+    const subTitle =  document.getElementById('sub-title')
+    console.log(subTitle)
+
+    // iii. target element by tagname
+    const h2 = document.getElementsByTagName('h2')
+    console.log(h2)
+
+    // iV. target element by class
+    const parag = document.getElementsByClassName('parag')
+    console.log(parag)
+  
+    // target and use for function
+    function changeTextColor(arr) {
+      for (let i = 0; i < arr.length; i++) {
+        if (i % 2 === 0) {
+          arr[i].style.color = 'green';
+        } else {
+          arr[i].style.color = 'blue'
+        }
+      }
+    }
+    changeTextColor(parag);
+  </script>
+</body>
+</html>
