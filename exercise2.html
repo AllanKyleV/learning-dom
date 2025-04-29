@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise II</title>
+</head>
+<body>
+    <div id="container">
+
+    </div>
+
+    <script>
+        const parag = document.createElement('p');
+        parag.textContent = "This is a paragraph inside the div.";
+        parag.setAttribute("style", "color: blue; background: yellow; border: 2px solid darkblue")
+        container.appendChild(parag);
+
+        const button = document.createElement('button');
+        button.textContent = 'Click me!'
+        container.appendChild(button);
+    </script>
+</body>
+</html>

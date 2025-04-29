@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events II</title>
+</head>
+<body>
+    <div id="container">
+        <button onclick="sayHello()">I'm a button</button>
+
+        <button id="btn">Hug me baby</button>
+    </div>
+
+    <script>
+        // Method 1
+        function sayHello(name) {
+            alert('Hello!')
+        }
+
+        // Method 2 & 3
+        const btn = document.querySelector('#btn');
+        // 2
+        btn.onclick = sayHello;
+
+        // 3
+        btn.addEventListener('Click', sayHello);
+    </script>
+</body>
+</html>
