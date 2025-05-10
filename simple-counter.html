@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Counter</title>
+    <style>
+      #count {
+        font-size: 3rem;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Counter</h1>
+    <div id="count">0</div>
+    <button id="decrease">−</button>
+    <button id="reset">Reset</button>
+    <button id="increase">+</button>
+
+    <script>
+        const count = document.querySelector('#count');
+        const decrease = document.querySelector('#decrease');
+        const reset = document.querySelector('#reset');
+        const increase = document.querySelector('#increase');
+
+        let value = 0;
+
+        function changeColor() {
+            if (value === 0) {
+                return 'black';
+            } else if (value > 0) {
+                return 'green';
+            } else {
+                return 'red';
+            }
+        }
+
+        increase.addEventListener('click', () => {
+            value++;
+            count.textContent = value;
+            count.style.color = changeColor();
+        });
+
+        decrease.addEventListener('click', () => {
+            value--;
+            count.textContent = value;
+            count.style.color = changeColor();
+        })
+
+        reset.addEventListener('click', () => {
+            value = 0;
+            count.textContent = value;
+            count.style.color = changeColor();
+        })
+    </script>
+  </body>
+</html>

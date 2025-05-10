@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        #container {
+            margin: 100px;
+        }
+
+        #box {
+            height: 200px;
+            width: 200px;
+            border: 2px solid darkblue;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="container">
+            <div id="box">
+
+            </div>
+        </div>
+    </main>
+
+    <script>
+    function getRandomColor() {
+        let color = [];
+        for (i = 0; i < 3; i++) {
+            color.push(Math.ceil(Math.random()*90));
+        }
+        return `hsl(${color[0]}%, ${color[1]}%, ${color[2]}%)`;
+    }
+
+    const box = document.querySelector('#box');
+
+    box.addEventListener('click', () => {
+        box.style.backgroundColor = getRandomColor();
+    })
+    </script>
+</body>
+</html>

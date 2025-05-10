@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>To-Do List</title>
+    <style>
+      #tasks li {
+        cursor: pointer;
+      }
+      .done {
+        text-decoration: line-through;
+        color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>To-Do List</h1>
+    <input type="text" id="task-input" placeholder="Enter a task" />
+    <button id="add-task">Add</button>
+
+    <ul id="tasks"></ul>
+
+    <script>
+        const inputTask = document.querySelector('#task-input');
+        const addTaskBtn = document.querySelector('#add-task');
+        const taskList = document.querySelector('#tasks');
+
+        addTaskBtn.addEventListener('click', () => {
+            const task = inputTask.value.trim();
+
+            if (task !== '') {
+                const li = document.createElement('li');
+                li.textContent = task;
+                taskList.appendChild(li);
+                inputTask.value = '';
+
+                li.addEventListener('click', () => {
+                    li.classList.toggle('done');
+                });
+            }
+        })
+
+    </script>
+  </body>
+</html>

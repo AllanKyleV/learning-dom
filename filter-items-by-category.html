@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Item Filter</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+    .buttons {
+      margin-bottom: 20px;
+    }
+    .buttons button {
+      margin-right: 10px;
+      padding: 6px 12px;
+      cursor: pointer;
+    }
+    .item {
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="buttons">
+    <button data-filter="all">All</button>
+    <button data-filter="fruit">Fruit</button>
+    <button data-filter="vegetable">Vegetable</button>
+    <button data-filter="dairy">Dairy</button>
+  </div>
+
+  <div class="items">
+    <div class="item" data-category="fruit">Apple</div>
+    <div class="item" data-category="vegetable">Carrot</div>
+    <div class="item" data-category="dairy">Milk</div>
+    <div class="item" data-category="fruit">Banana</div>
+    <div class="item" data-category="vegetable">Broccoli</div>
+    <div class="item" data-category="dairy">Cheese</div>
+  </div>
+
+  <script>
+    
+  </script>
+</body>
+</html>

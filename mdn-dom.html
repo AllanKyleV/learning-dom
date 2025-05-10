@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    <!-- Basic dom manipulation -->
+    <a href=""></a>
+
+    <!-- Creating and placing new nodes -->
+     <section></section>
+
+    <script>
+        // Basic dom manipulation
+        const link = document.querySelector('a');
+        link.textContent = 'Mozilla Developer Network';
+        link.href = 'https://developer.mozilla.org';
+
+        // Creating and placing new nodes
+        const sect = document.querySelector('section');
+
+        const para = document.createElement('p');
+        para.textContent = "We hope you enjoyed the ride.";
+        sect.appendChild(para);
+
+        const text = document.createTextNode(
+            " — the premier source for web development knowledge.",
+        )
+        const linkPara = document.querySelector("p");
+        linkPara.appendChild(text);
+
+    </script>
+</body>
+</html>
